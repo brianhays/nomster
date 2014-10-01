@@ -5,3 +5,7 @@
 	<p><%= place.description %></p><br />
 </div>
 <% end %>
+
+<div class="container-fluid">
+<%= will_paginate @places, renderer: BootstrapPagination::Rails %>
+</div>
