@@ -1,0 +1,15 @@
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+	<h1>Enter Your Gym Details</h1>
+	<%= simple_form_for @place do |f| %>
+	  <div class="form-group">
+		<%= f.input :name %>
+	  </div>
+	  <div class="form-group">
+		<%= f.input :address %>
+	  </div>
+	  <div class="form-group">
+    	<%= f.input :description %>
+      </div>
+    	<%= f.submit 'Create', :class => 'btn btn-primary' %>
+	<% end %>
+</div>
