@@ -38,6 +38,8 @@ gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
 gem 'simple_form'
 gem 'devise', '>= 3.2.4'
+gem 'geocoder'
+gem 'figaro'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
