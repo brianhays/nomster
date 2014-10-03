@@ -29,11 +29,16 @@
     <div id="map-canvas"></div>
 <% end %>
 
+<% if @place.photos.present? %>
+<p><strong>Photos:</strong></p>
+<% end %>
+
 <div class="row">
     <% @place.photos.each do |photo| %>
-      <div class="col-xs-3 col-sm-2 col-md-1">
+      <div class="pull-left">
+      <a href="<%= photo.picture %>" data-lightbox="<%= @place.name %>" data-title="<%= photo.caption %>">
           <%= image_tag photo.picture, class: "thumbnail" %>
-          <p><%= photo.caption %></p>
+      </a>
       </div>
     <% end %>
 </div>

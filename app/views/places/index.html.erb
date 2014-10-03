@@ -3,6 +3,11 @@
 	<h1><%= link_to place.name, place %></h1>
 	<i><%= place.address %></i><br /><br />
 	<p><%= place.description %></p>
+  <% if place.photos.present? %>
+    <%= link_to place do %>
+    <%= image_tag place.photos.last.picture_url, class: "img-responsive img-thumbnail front-img pull-left" %>
+    <% end %>
+  <% end %>
 
 
 <% if place.comments.present? %>
